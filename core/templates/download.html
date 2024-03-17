@@ -1,0 +1,26 @@
+<h2>{{profile.name}}</h2>
+<h3>{{profile.email}}</h3>
+<h3>{{profile.phone}}</h3>
+<hr>
+<br>
+<h4>Summary :-</h4>
+<p>{{profile.summary}}</p>
+<hr>
+<h4>Skills :-</h4>
+<p>{% for s in profile.skills.split%}
+    <li>{{s}}</li>
+    {%endfor%}
+</p>
+<hr>
+<h4>Education :-</h4>
+<ul>
+    <li>Schooling : {{profile.school}}</li>
+    <li>{{profile.degree}} from {{profile.college}}</li>
+</ul>
+<hr>
+<h4>Experience :- </h4>
+<ul>
+    {% for exp in profile.experience.split%}
+    <li>{{exp}}</li>
+    {%endfor%}
+</ul>

@@ -1,0 +1,49 @@
+{%extends 'base.html'%}
+{%block title%}Home{%endblock%}
+{%block css%}<style></style>{%endblock%}
+{%block body%}
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <form method="post">
+                {%csrf_token%}
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="name" name="first_name" placeholder="First Name">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="name" name="last_name" placeholder="Last Name">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone number">
+                </div>
+                <div class="mb-3">
+                    <textarea name="summary" id="summary" placeholder="About" cols="30" rows="10"></textarea>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="degree" name="degree" placeholder="Degree">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="school" name="school" placeholder="School">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="college" name="college" placeholder="College">
+                </div>
+                <div class="mb-3">
+                    <textarea name="experience" id="experience" placeholder="Experience" cols="30" rows="10"></textarea>
+                </div>
+                <div class="mb-3">
+                    <textarea name="skills" id="skills" placeholder="Skills" cols="30" rows="10"></textarea>
+                </div>
+                <div class="mb-3">
+                    <textarea name="projects" id="skills" placeholder="Projects" cols="30" rows="10"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{%endblock%}
+{%block js%}<script></script>{%endblock%}
